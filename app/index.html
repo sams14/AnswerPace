@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AnswerPace</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="homeView" class="view home-view">
+        <div class="brand-block">
+          <p class="eyebrow">Mains answer-writing timer</p>
+          <h1>AnswerPace</h1>
+          <p class="subtitle">Practice one question at a time, track your pace, and export a clean attempt report.</p>
+        </div>
+
+        <div class="home-actions">
+          <label class="button secondary file-button" for="questionFile">Upload File</label>
+          <input id="questionFile" type="file" accept=".txt,.pdf,text/plain,application/pdf" />
+          <button id="startButton" class="button primary" type="button" disabled>Start Test</button>
+        </div>
+
+        <div id="fileStatus" class="status-line">No question file loaded.</div>
+        <div class="sample-row">
+          <button id="loadSampleButton" class="text-button" type="button">Load sample questions</button>
+        </div>
+      </section>
+
+      <section id="testView" class="view test-view hidden">
+        <header class="test-header">
+          <div>
+            <p id="progressLabel" class="eyebrow">Question 1 of 1</p>
+            <h2>Answer Session</h2>
+          </div>
+          <div class="timer-stack" aria-live="polite">
+            <span class="timer-label">Total Time</span>
+            <strong id="totalTimer">00:00:00</strong>
+          </div>
+        </header>
+
+        <div class="question-panel">
+          <div class="question-meta">
+            <span id="questionTimer">This question: 00:00</span>
+            <span id="pauseBadge" class="pause-badge">Pause available</span>
+          </div>
+          <p id="questionText" class="question-text"></p>
+        </div>
+
+        <div id="pausePanel" class="pause-panel hidden">
+          <div>
+            <p class="eyebrow">Paused</p>
+            <strong id="pauseCountdown">15:00</strong>
+          </div>
+          <button id="continueButton" class="button primary" type="button">Continue</button>
+        </div>
+
+        <footer class="test-actions">
+          <button id="pauseButton" class="button secondary" type="button">Pause</button>
+          <button id="nextButton" class="button primary" type="button">Next</button>
+        </footer>
+      </section>
+
+      <section id="resultsView" class="view results-view hidden">
+        <header class="results-header">
+          <div>
+            <p class="eyebrow">Attempt complete</p>
+            <h2>Your Pace Report</h2>
+          </div>
+          <button id="downloadCsvButton" class="button primary" type="button">Download CSV</button>
+        </header>
+
+        <div id="summaryGrid" class="summary-grid"></div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Question</th>
+                <th>Time Taken</th>
+              </tr>
+            </thead>
+            <tbody id="resultsTable"></tbody>
+          </table>
+        </div>
+
+        <div class="results-actions">
+          <button id="restartButton" class="button secondary" type="button">Back to Home</button>
+          <button id="retryButton" class="button primary" type="button">Retake Same Test</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "answerpace",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A lightweight timed answer-writing practice app for mains-style exams.",
+  "scripts": {
+    "check:build-prereqs": "node scripts/check-build-prereqs.js",
+    "serve:app": "node scripts/serve-app.js",
+    "test": "node tests/run-tests.js",
+    "tauri:build": "node scripts/run-tauri.js build",
+    "tauri:dev": "node scripts/run-tauri.js dev"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0"
+  }
+}
