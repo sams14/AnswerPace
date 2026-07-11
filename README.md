@@ -2,6 +2,10 @@
 
 AnswerPace is a lightweight desktop-first practice timer for UPSC Mains, State PSC Mains, and other administrative exam written rounds.
 
+## Download
+
+Download the latest Windows installer from the [AnswerPace Releases page](https://github.com/sams14/AnswerPace/releases).
+
 ## What It Does
 
 - Upload a question file.
@@ -91,3 +95,5 @@ The generated installer will appear under `src-tauri/target/release/bundle/`.
 ## GitHub Releases
 
 The included GitHub Actions workflow can build a Windows installer when a tag like `v0.1.0` is pushed.
+
+Published installers are available on the [AnswerPace Releases page](https://github.com/sams14/AnswerPace/releases).
