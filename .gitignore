@@ -7,3 +7,4 @@ src-tauri/target/
 *.log
 .DS_Store
 Thumbs.db
+LOCAL_PROJECT_NOTES.md
